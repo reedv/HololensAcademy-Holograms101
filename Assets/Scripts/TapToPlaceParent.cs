@@ -37,9 +37,12 @@ public class TapToPlaceParent : MonoBehaviour
             RaycastHit hitInfo;  // Structure used to get information back from raycast.
             // FIXME: This 'if' needs to be the EXACTLY as written in the tutorial (copy/paste). 
             //    For some reason expanding over multiple lines like this does not work. WHY?
-            //    Are there hidden whitespaces?
-            if (Physics.Raycast(headPosition, gazeDirection, out hitInfo,
-                30.0f, SpatialMapping.PhysicsRaycastMask))
+            //    Are there hidden whitespaces? YES: need no whitespace before comma-seperated newlines
+            if (Physics.Raycast(headPosition,
+                                gazeDirection,
+                                out hitInfo,
+                                30.0f,
+                                SpatialMapping.PhysicsRaycastMask))
             {
                 // Move this object's parent object to
                 // where the raycast hit the Spatial Mapping mesh.
